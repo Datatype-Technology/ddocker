@@ -9,6 +9,7 @@ docker-compose = "*"
 [packages]
 django = "*"
 psycopg2-binary = "*"
+gunicorn = "*"
 
 [requires]
 python_version = "3.8"

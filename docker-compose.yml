@@ -14,7 +14,8 @@ services:
       - .:/code
     ports:
       - 8000:8000
-    command: pipenv run python manage.py runserver 0.0.0.0:8000
+#    command: pipenv run python manage.py runserver 0.0.0.0:8000
+    command: gunicorn -w 3 config.wsgi:application --log-file -
     depends_on:
       - db
 
