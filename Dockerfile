@@ -13,3 +13,4 @@ RUN apt-get update && \
 RUN pip install pipenv
 COPY ./Pipfile* /app/
 RUN pipenv install
+RUN pipenv shell
